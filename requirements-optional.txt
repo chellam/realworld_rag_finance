@@ -1,0 +1,17 @@
+# Optional / heavy ML packages (core ML pieces only)
+# These are the main heavy dependencies needed for embeddings/vector search.
+# For best results on macOS, prefer installing `faiss` and `torch` via conda.
+
+# Vector search & retrievers
+# Prefer installing faiss via conda on macOS: conda install -c conda-forge faiss-cpu
+faiss-cpu==1.13.1
+
+# Embeddings & rerankers
+transformers==4.46.2
+sentence-transformers==3.2.1
+
+# PyTorch: use a CPU wheel compatible with Python 3.11
+torch==2.2.2
+
+# If you need LangChain, install it separately after these core ML packages,
+# e.g. `pip install langchain` (leave unpinned to avoid version conflicts).
