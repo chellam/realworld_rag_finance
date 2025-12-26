@@ -8,8 +8,13 @@ __pycache__/
 venv/
 ENV/
 env/
+
+# Environment variables (secrets)
 .env
-.env.*
+.env.local
+.env.*.local
+
+# Note: .env.example IS tracked and should be committed
 
 # IDEs and editors
 .vscode/

@@ -25,14 +25,24 @@ pip install -r requirements.txt
 pip install -r requirements-optional.txt || true
 ```
 
-Environment variables (examples)
+### Environment variables
+
+Create a `.env` file by copying `.env.example`:
 
 ```bash
-# Path to FAISS index directory
-export RAG_FAISS_DIR=artifacts/faiss_index/faiss_ragbench_finqa_test
-# Optional model config (depends on your pipeline)
-export RAG_MODEL_NAME="local-or-remote-model-id"
+cp .env.example .env
 ```
+
+Then edit `.env` and fill in your secrets (e.g., `GROQ_API_KEY`):
+
+```bash
+# .env
+GROQ_API_KEY=your_actual_groq_api_key_here
+```
+
+**Important:** `.env` is in `.gitignore` and will never be committed to git. Always keep secrets in `.env`, not in source code.
+
+Optional environment variables are documented in `.env.example` for model selection, embeddings, and dataset configuration. If not set, defaults from `rag_config.py` are used.
 
 ## Quick start
 
